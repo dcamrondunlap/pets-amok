@@ -25,7 +25,7 @@ const IndexPage: React.FC = () => {
 
   return (
     <div className=''>
-      <h1 className="flex justify-center text-4xl">Welcome to TechPaws Haven</h1>
+      <h1 className="flex justify-center text-4xl text-white ">Welcome to TechPaws Haven</h1>
       <QuestionList questions={questions} onQuestionClick={handleQuestionClick} />
     </div>
   )
