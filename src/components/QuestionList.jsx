@@ -1,17 +1,6 @@
 import React from 'react';
 
-export interface Question {
-  id: number;
-  text:string;
-  options: string[];
-}
-
-interface QuestionListProps {
-  questions: Question[];
-  onQuestionClick: (option: string) => void;
-}
-
-const QuestionList: React.FC<QuestionListProps> = ({questions, onQuestionClick}) => {
+export const QuestionList = ({questions, onQuestionClick}) => {
   return (
     <div className='flex justify-center items-center h-screen '>
       <div className='text-center'>
@@ -24,7 +13,7 @@ const QuestionList: React.FC<QuestionListProps> = ({questions, onQuestionClick})
               {question.options.map((option, optionIndex) => (
                 <div
                 key={optionIndex}
-                className='font-bold border-b border-black text-xl cursor-pointer py-2'
+                className='font-bold border-b border-black text-xl cursor-pointer shadow-lg hover:bg-sky-700 py-2'
                 onClick={() => onQuestionClick(option)}
                 >
                   {option}
