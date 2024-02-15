@@ -1,6 +1,6 @@
 const baseUrl = 'http://localhost:9001'
 
-async function fetchQuestions(url) {
+async function fetchData(url) {
   const response = await fetch(url);
 
   if (!response.ok){
@@ -12,5 +12,10 @@ async function fetchQuestions(url) {
 
 export function getQuestions() {
   const url = `${baseUrl}/api/questions`;
-  return fetchQuestions(url);
+  return fetchData(url);
+}
+
+export function getPets() {
+  const url = `${baseurl}/api/pets`;
+  return fetchData(url);
 }
