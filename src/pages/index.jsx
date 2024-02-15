@@ -30,6 +30,7 @@ const IndexPage = () => {
     }
 
     fetchQuestions();
+    fetchPets();
 
   }, [])
 
@@ -46,7 +47,6 @@ const IndexPage = () => {
     </div>
 
     <div>
-      <h2>Pets:</h2>
       <PetsDisplay pets={pets} />
     </div>
   </div>

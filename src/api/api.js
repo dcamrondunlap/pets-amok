@@ -16,6 +16,6 @@ export function getQuestions() {
 }
 
 export function getPets() {
-  const url = `${baseurl}/api/pets`;
+  const url = `${baseUrl}/api/pets`;
   return fetchData(url);
 }
