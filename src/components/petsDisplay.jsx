@@ -9,9 +9,24 @@ const petsDisplay = ({pets}) => {
 
   return (
     <div className="pets-container ">
-      <button onClick={togglePetsVisibility}
-      className=" bg-sky-500 hover:bg-sky-700 fixed top-4 left-3 text-white rounded-full">
-      {showPets ? 'Hide Pets' : 'Show Pets'}
+      <button
+        onClick={togglePetsVisibility}
+        className="bg-sky-500 hover:bg-sky-700 fixed top-0 left-1 text-white rounded-full p-2"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          className="h-6 w-6"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d={showPets ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16m-7 6h7'}
+          />
+        </svg>
       </button>
       {showPets && (
         <div className="dropdown p-4 mt-4 bg-white border rounded shadow-md fixed top-8 left-10">
